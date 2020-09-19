@@ -1,0 +1,23 @@
+{
+  "name": "wschat",
+  "version": "1.0.0",
+  "description": "windsurf chat",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server",
+    "hapi:server": "node ./hapi-server.js"
+  },
+  "author": "Andrea Franceschi",
+  "license": "",
+  "dependencies": {
+    "@hapi/hapi": "^20.0.0",
+    "antd": "^4.6.2",
+    "express": "^4.17.1",
+    "moment": "^2.27.0",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

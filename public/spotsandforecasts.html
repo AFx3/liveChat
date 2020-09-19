@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet"
+		  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+		  integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+		  crossorigin="anonymous" />
+	<link rel="stylesheet" href="css/style.css" />
+	<title>W G L C H A T</title>
+	<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script> <!-- windy api -->
+	<script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script><!-- windy api -->
+
+	<style>
+		#windy {
+			width: 100%;
+			height: 500px;
+		}
+	</style>
+
+</head>
+	<body>
+		<script>
+			fetch('https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=51d48fcfea3fdf3996ad14f5a621c87b').then(
+				function(result) {
+					return result.json()
+				}
+			).then(
+				function(j) {
+					console.log(j)
+				}
+			);
+		 </script>
+		<div class="spotsandforecast-container">
+			<header class="join-header">
+				<h1><i class="fab fa-ravelry"></i> W G L C H A T</h1>
+				
+			</header>
+			<header class="windy">
+				<div id="windy"></div>
+				<script src="./windy.js"></script>
+		
+			</header>
+
+		</div>
+		
+	</body>
+</html>
